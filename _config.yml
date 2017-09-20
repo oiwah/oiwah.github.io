@@ -77,7 +77,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Hidekazu Oiwa"
+  name             : "Hidekazu\ Oiwa"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Ph.D (Information Science and Technology) at <a href="http://www.u-tokyo.ac.jp/en/">the University of Tokyo</a>, Japan.<br> My research interests are <b>Machine Learning</b> and <b>Natural Language Processing</b>.<br>"
   location         :
