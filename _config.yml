@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en"
-title                    : "Hidekazu Oiwa's Page"
+title                    : "Site Title"
 title_separator          : "-"
-name                     : "Hidekazu Oiwa"
-description              : "Hidekazu Oiwa's Page: A researcher of Machine Learning and Natural Language Processing"
-url                      : "http://oiwah.com"
-baseurl                  : "/about/"
-repository               : "oiwah/oiwah.github.io"
+name                     : "Your Name"
+description              : "An amazing website."
+url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : # the subpath of your site, e.g. "/blog"
+repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -48,7 +48,7 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 
 # SEO Related
-googlesite_verification :
+google_site_verification :
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
@@ -70,18 +70,18 @@ social:
 
 # Analytics
 analytics:
-  provider               : "google-universal"
+  provider               : false # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          : "UA-7555561-6"
+    tracking_id          :
 
 
 # Site Author
 author:
-  name             : "Hidekazu Oiwa"
+  name             : "Your Name"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Ph.D (Information Science and Technology) at <a href="http://www.u-tokyo.ac.jp/en/">the University of Tokyo</a>, Japan.<br> My research interests are <b>Machine Learning</b> and <b>Natural Language Processing</b>.<br>"
-  location         :
-  email            : "hidekazu.oiwa at gmail.com"
+  bio              : "I am an amazing person."
+  location         : "Somewhere"
+  email            :
   uri              :
   bitbucket        :
   codepen          :
