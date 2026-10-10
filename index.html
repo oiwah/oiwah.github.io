@@ -30,86 +30,108 @@
             padding: 40px 16px;
         }
         #page-wrap {
-            max-width: 920px;
+            max-width: 860px;
             margin: 0 auto;
             background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
             border: 1px solid #e2e8f0;
-            padding: 44px 50px;
+            overflow: hidden;
         }
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
             gap: 28px;
-            margin-bottom: 32px;
+            padding: 36px 44px 30px;
+            background: linear-gradient(135deg, rgba(239, 246, 255, 0.7) 0%, rgba(238, 242, 255, 0.4) 100%);
+            border-bottom: 1px solid #e2e8f0;
         }
         .header-content {
             flex: 1;
             min-width: 0;
         }
-        #pic {
-            width: 130px;
-            height: 130px;
-            border-radius: 16px;
-            object-fit: cover;
-            box-shadow: 0 4px 14px rgba(15, 23, 42, 0.12);
-            border: 3px solid #ffffff;
-            flex-shrink: 0;
-        }
-        #contact-info {
-            margin-bottom: 16px;
-        }
         h1.fn {
-            font-size: 34px;
+            font-size: 32px;
             font-weight: 700;
             color: #0f172a;
             letter-spacing: -0.02em;
             margin: 0 0 6px 0;
         }
-        #contact-info p {
-            font-size: 14px;
+        .contact-links {
+            font-size: 13.5px;
             color: #64748b;
-            margin: 0;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .contact-links a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.15s;
+        }
+        .contact-links a:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+        .contact-dot {
+            color: #cbd5e1;
+        }
+        #pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 18px;
+            object-fit: cover;
+            box-shadow: 0 4px 14px rgba(15, 23, 42, 0.12);
+            border: 3px solid #ffffff;
+            flex-shrink: 0;
         }
         #objective {
-            background: #f8fafc;
+            background: #ffffff;
             border-radius: 12px;
-            border-left: 4px solid #1a73e8;
-            padding: 16px 20px;
-            border-top: 1px solid #e2e8f0;
-            border-right: 1px solid #e2e8f0;
-            border-bottom: 1px solid #e2e8f0;
+            border: 1px solid rgba(191, 219, 254, 0.8);
+            padding: 14px 18px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
         }
         #objective h2 {
-            font-size: 16.5px;
+            font-size: 15.5px;
             font-weight: 600;
-            color: #0f172a;
+            color: #1d4ed8;
+            margin-bottom: 3px;
+        }
+        #objective .subtitle {
+            font-size: 12.5px;
+            color: #64748b;
             margin-bottom: 6px;
         }
-        #objective p {
-            font-size: 13.5px;
-            color: #475569;
-            line-height: 1.55;
+        #objective .summary-text {
+            font-size: 13px;
+            font-weight: 500;
+            color: #1e3a8a;
+            line-height: 1.5;
             margin: 0;
+        }
+        .content-body {
+            padding: 36px 44px 44px;
         }
         dl {
             display: grid;
-            grid-template-columns: 180px 1fr;
+            grid-template-columns: 160px 1fr;
             column-gap: 36px;
-            row-gap: 32px;
-            border-top: 1px solid #e2e8f0;
-            padding-top: 32px;
+            row-gap: 36px;
         }
         dt {
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 700;
-            color: #1e293b;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #2563eb;
             text-align: right;
             padding-right: 24px;
             border-right: 2px solid #e2e8f0;
-            letter-spacing: -0.01em;
         }
         dd {
             min-width: 0;
@@ -128,27 +150,35 @@
             flex-wrap: wrap;
             gap: 8px;
         }
+        h2 span.current-date {
+            font-size: 11.5px;
+            color: #1d4ed8;
+            font-weight: 600;
+            background: #dbeafe;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
         h2 span {
-            font-size: 12px;
-            color: #475569;
+            font-size: 11.5px;
+            color: #64748b;
             font-weight: 500;
-            font-style: normal;
             background: #f1f5f9;
             padding: 2px 8px;
-            border-radius: 4px;
-            font-family: inherit;
+            border-radius: 6px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
         }
         a:link, a:visited {
-            color: #1a73e8;
+            color: #2563eb;
             text-decoration: none;
             transition: color 0.15s;
         }
         a:hover {
-            color: #1557b0;
+            color: #1d4ed8;
             text-decoration: underline;
         }
         a:active {
-            color: #0d47a1;
+            color: #1e40af;
         }
         ul {
             list-style-type: none;
@@ -168,28 +198,90 @@
             left: 0;
             color: #94a3b8;
         }
+        
+        /* Publication Card Styling */
+        ul.publications-list {
+            margin: 0;
+            padding: 0;
+        }
+        ul.publications-list > li {
+            padding: 14px 16px;
+            margin-bottom: 12px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            transition: all 0.2s ease;
+        }
+        ul.publications-list > li::before {
+            display: none;
+        }
+        ul.publications-list > li:hover {
+            background: #ffffff;
+            border-color: #93c5fd;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+            transform: translateY(-1px);
+        }
+        .paper-title {
+            font-size: 14.5px;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 4px;
+        }
         ul.paper {
-            margin: 4px 0 16px 14px;
+            margin: 0;
             padding: 0;
         }
         ul.paper > li {
             padding-left: 0;
-            margin-bottom: 2px;
-            font-size: 13.5px;
+            margin-bottom: 3px;
+            font-size: 13px;
             color: #64748b;
         }
         ul.paper > li::before {
             display: none;
         }
-        ul.paper b {
+        ul.paper > li u {
             color: #0f172a;
+            font-weight: 600;
+            text-decoration: underline;
         }
+        .venue-badge-arxiv {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            color: #7e22ce;
+            background: #f3e8ff;
+            padding: 2px 8px;
+            border-radius: 6px;
+            margin-right: 6px;
+        }
+        .venue-badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            color: #4338ca;
+            background: #e0e7ff;
+            padding: 2px 8px;
+            border-radius: 6px;
+            margin-right: 6px;
+        }
+        .paper-link {
+            font-size: 12px;
+            font-weight: 500;
+            color: #2563eb;
+            text-decoration: none;
+        }
+        .paper-link:hover {
+            text-decoration: underline;
+        }
+
         .clear { clear: both; }
 
         @media (max-width: 768px) {
-            #page-wrap { padding: 24px 20px; }
-            .header-container { flex-direction: column-reverse; align-items: flex-start; gap: 16px; }
-            #pic { width: 96px; height: 96px; }
+            #page-wrap { border-radius: 0; border: none; }
+            .header-container { padding: 24px 20px; flex-direction: column-reverse; align-items: flex-start; gap: 16px; }
+            #pic { width: 90px; height: 90px; }
+            .content-body { padding: 24px 20px; }
             dl { grid-template-columns: 1fr; row-gap: 24px; }
             dt { text-align: left; border-right: none; border-bottom: 2px solid #e2e8f0; padding: 0 0 6px 0; }
         }
@@ -204,28 +296,32 @@
             <div class="header-content">
                 <div id="contact-info" class="vcard">
                     <h1 class="fn">Hidekazu Oiwa</h1>
-                    <p>
-                        Email: hidekazu.oiwa at gmail.com
+                    <p class="contact-links">
+                        <span>📧 hidekazu.oiwa at gmail.com</span>
+                        <span class="contact-dot">•</span>
+                        <a href="https://github.com/oiwah" target="_blank">GitHub</a>
+                        <span class="contact-dot">•</span>
+                        <a href="https://www.linkedin.com/in/hidekazu-oiwa-18772b26" target="_blank">LinkedIn</a>
                     </p>
                 </div>
 
                 <div id="objective">
                     <h2>Software Engineer at Google DeepMind</h2>
-                    <p>
-	              Ph.D (Information Science and Technology) at <a href="http://www.u-tokyo.ac.jp/en/">the University of Tokyo</a>, Japan.<br>
-	              Focusing on Generative AI for information tasks and search (QA) quality.
-                    </p>
+                    <p class="subtitle">Ph.D (Information Science and Technology) at <a href="http://www.u-tokyo.ac.jp/en/">the University of Tokyo</a>, Japan.</p>
+                    <p class="summary-text">Focusing on Generative AI for information tasks and search (QA) quality.</p>
                 </div>
             </div>
 
             <img src="images/profile.jpg" alt="Hidekazu Oiwa" id="pic" />
         </div>
+
+        <div class="content-body">
         <dl>
             <dd class="clear"></dd>
 
             <dt>Experience</dt>
             <dd>
-                <h2>Google DeepMind <span>2025/08 >> ....</span></h2>
+                <h2>Google DeepMind <span class="current-date">2025/08 >> ....</span></h2>
 		<ul>
 		  <li>Software Engineer</li>
 		</ul>
@@ -287,42 +383,52 @@
             
             <dt>Selected Publications</dt>
             <dd>
-		<h2><a href="https://scholar.google.co.jp/citations?user=fGSgRDUAAAAJ&hl=en">Full publication list is on Google Scholar</a></h2>
-		<ul>
-		  <li>"DeepSearchQA: Bridging the Comprehensiveness Gap for Deep Research Agents"
-	          <ul class="paper">
-		     <li>Nikita Gupta, Riju Chatterjee, Lukas Haas, Connie Tao, Andrew Wang, Chang Liu, <u>Hidekazu Oiwa</u>, Elena Gribovskaya, Jan Ackermann, John Blitzer, Sasha Goldshtein, Dipanjan Das</li>
-	             <li>arXiv (<b>2026</b>)</li>
-                     <li>[<a href="https://arxiv.org/abs/2601.20975">Paper</a>]</li>
-		  </ul></li>
-		  <li>"Scalable Semantic Querying of Text"
-	          <ul class="paper">
-		     <li>Xiaolan Wang, Aaron Feng, Behzad Golshan, Alon Halevy, George Mihaila, <u>Hidekazu Oiwa</u>, Wang-Chiew Tan</li>
-	             <li>International Conference on Very Large Data Bases (<b>VLDB 2018</b>)</li>
-		  </ul></li>  
-		  <li>"Knowledge Transfer for Out-of-Knowledge-Base Entities: A Graph Neural Network Approach"
-                  <ul class="paper">
-                     <li>Takuo Hamaguchi, <u>Hidekazu Oiwa</u>, Masashi Shinbo, Yuji Matsumoto</li>
-                     <li>International Joint Conference on Artificial Intelligence. (<b>IJCAI 2017</b>)</li>
-                  </ul></li>
-		  <li>"Partition-wise Linear Models"
-                  <ul class="paper">
-                     <li><u>Hidekazu Oiwa</u>, Ryohei Fujimaki</li>
-                     <li>Advances in Neural Information Processing Systems (<b>NIPS 2014</b>)</li>
-                     <li>[<a href="http://papers.nips.cc/paper/5605-partition-wise-linear-models.pdf">Paper</a>]</li>
-                  </ul></li>
-		  <li>"Online and Stochastic Learning with a Human Cognitive Bias"
-                  <ul class="paper">
-                     <li><u>Hidekazu Oiwa</u>, Hiroshi Nakagawa</li>
-                     <li>AAAI Conference on Artificial Intelligence (<b>AAAI-14</b>)</li>
-                     <li>[<a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI14/paper/viewPDFInterstitial/8358/8844">Paper</a>] [<a href="papers/oiwa_aaai2014_sup.pdf">Extended Version</a>] [<a href="upload/oiwa_aaai2014_pre.pdf">Slides</a>]</li>
-                  </ul></li>
-		  <li>"Healing Truncation Bias : Self-weighted Truncation framework for Dual Averaging"
-                  <ul class="paper">
-                     <li><u>Hidekazu Oiwa</u>, Shin Matsushima, Hiroshi Nakagawa</li>
-                     <li>IEEE International Conference on Data Mining (<b>ICDM 2012</b>)</li>
-                     <li>[<a href="papers/oiwa_icdm2012.pdf">Preprint</a>] [<a href="upload/oiwa_icdm2012_pre.pdf">Slides</a>]</li>
-                  </ul></li>
+		<div style="margin-bottom: 16px;">
+		  <a href="https://scholar.google.co.jp/citations?user=fGSgRDUAAAAJ&hl=en" target="_blank" style="font-size: 13.5px; font-weight: 500;">Full publication list is on Google Scholar →</a>
+		</div>
+		<ul class="publications-list">
+		  <li>
+		     <div class="paper-title">"DeepSearchQA: Bridging the Comprehensiveness Gap for Deep Research Agents"</div>
+	             <ul class="paper">
+		        <li>Nikita Gupta, Riju Chatterjee, Lukas Haas, Connie Tao, Andrew Wang, Chang Liu, <u>Hidekazu Oiwa</u>, Elena Gribovskaya, Jan Ackermann, John Blitzer, Sasha Goldshtein, Dipanjan Das</li>
+	                <li><span class="venue-badge-arxiv">arXiv (2026)</span> <a class="paper-link" href="https://arxiv.org/abs/2601.20975" target="_blank">[Paper]</a></li>
+		     </ul>
+		  </li>
+		  <li>
+		     <div class="paper-title">"Scalable Semantic Querying of Text"</div>
+	             <ul class="paper">
+		        <li>Xiaolan Wang, Aaron Feng, Behzad Golshan, Alon Halevy, George Mihaila, <u>Hidekazu Oiwa</u>, Wang-Chiew Tan</li>
+	                <li><span class="venue-badge">VLDB 2018</span></li>
+		     </ul>
+		  </li>
+		  <li>
+		     <div class="paper-title">"Knowledge Transfer for Out-of-Knowledge-Base Entities: A Graph Neural Network Approach"</div>
+                     <ul class="paper">
+                        <li>Takuo Hamaguchi, <u>Hidekazu Oiwa</u>, Masashi Shinbo, Yuji Matsumoto</li>
+                        <li><span class="venue-badge">IJCAI 2017</span></li>
+                     </ul>
+		  </li>
+		  <li>
+		     <div class="paper-title">"Partition-wise Linear Models"</div>
+                     <ul class="paper">
+                        <li><u>Hidekazu Oiwa</u>, Ryohei Fujimaki</li>
+                        <li><span class="venue-badge">NIPS 2014</span> <a class="paper-link" href="http://papers.nips.cc/paper/5605-partition-wise-linear-models.pdf" target="_blank">[Paper]</a></li>
+                     </ul>
+		  </li>
+		  <li>
+		     <div class="paper-title">"Online and Stochastic Learning with a Human Cognitive Bias"</div>
+                     <ul class="paper">
+                        <li><u>Hidekazu Oiwa</u>, Hiroshi Nakagawa</li>
+                        <li><span class="venue-badge">AAAI-14</span> <a class="paper-link" href="http://www.aaai.org/ocs/index.php/AAAI/AAAI14/paper/viewPDFInterstitial/8358/8844" target="_blank">[Paper]</a> <a class="paper-link" href="papers/oiwa_aaai2014_sup.pdf">[Extended Version]</a> <a class="paper-link" href="upload/oiwa_aaai2014_pre.pdf">[Slides]</a></li>
+                     </ul>
+		  </li>
+		  <li>
+		     <div class="paper-title">"Healing Truncation Bias : Self-weighted Truncation framework for Dual Averaging"</div>
+                     <ul class="paper">
+                        <li><u>Hidekazu Oiwa</u>, Shin Matsushima, Hiroshi Nakagawa</li>
+                        <li><span class="venue-badge">ICDM 2012</span> <a class="paper-link" href="papers/oiwa_icdm2012.pdf">[Preprint]</a> <a class="paper-link" href="upload/oiwa_icdm2012_pre.pdf">[Slides]</a></li>
+                     </ul>
+		  </li>
 		</ul>
             </dd>
             
@@ -360,6 +466,7 @@
 	      </ul>
             </dd>
         </dl>
+        </div>
         <div class="clear"></div>
     </div>
 
