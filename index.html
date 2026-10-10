@@ -9,281 +9,310 @@
 
   ga('create', 'UA-7555561-6', 'auto');
   ga('send', 'pageview');
-
 </script>
 
 <head>
      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
-     <title>Hidekazu Oiwa's Page</title>
-
      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     <title>Hidekazu Oiwa's Page</title>
 
      <style type="text/css">
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            font-size: 14.5px;
-            line-height: 1.6;
+            font-size: 14px;
+            line-height: 1.5;
             color: #334155;
-            background: #f8fafc;
+            background-color: #f1f5f9;
             padding: 40px 16px;
         }
         #page-wrap {
-            max-width: 860px;
+            max-width: 768px;
             margin: 0 auto;
             background: #ffffff;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+            border-radius: 16px;
+            box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
             border: 1px solid #e2e8f0;
             overflow: hidden;
         }
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 28px;
-            padding: 36px 44px 30px;
-            background: linear-gradient(135deg, rgba(239, 246, 255, 0.7) 0%, rgba(238, 242, 255, 0.4) 100%);
+
+        /* Header Banner matching preview */
+        .header-banner {
+            padding: 28px 32px;
             border-bottom: 1px solid #e2e8f0;
+            background: linear-gradient(135deg, rgba(239, 246, 255, 0.7) 0%, rgba(238, 242, 255, 0.4) 100%);
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 24px;
         }
-        .header-content {
+        .header-main {
             flex: 1;
             min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
         h1.fn {
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 700;
             color: #0f172a;
-            letter-spacing: -0.02em;
-            margin: 0 0 6px 0;
+            letter-spacing: -0.025em;
+            margin: 0 0 4px 0;
+            line-height: 1.2;
         }
-        .contact-links {
-            font-size: 13.5px;
+        .contact-line {
+            font-size: 13px;
             color: #64748b;
-            margin-bottom: 16px;
             display: flex;
             align-items: center;
             flex-wrap: wrap;
             gap: 8px;
+            margin: 0;
         }
-        .contact-links a {
+        .contact-line a {
             color: #2563eb;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.15s;
         }
-        .contact-links a:hover {
+        .contact-line a:hover {
             color: #1d4ed8;
             text-decoration: underline;
         }
         .contact-dot {
             color: #cbd5e1;
         }
-        #pic {
-            width: 120px;
-            height: 120px;
-            border-radius: 18px;
-            object-fit: cover;
-            box-shadow: 0 4px 14px rgba(15, 23, 42, 0.12);
-            border: 3px solid #ffffff;
-            flex-shrink: 0;
-        }
+        
+        /* Objective Card */
         #objective {
-            background: #ffffff;
+            background: rgba(255, 255, 255, 0.85);
             border-radius: 12px;
-            border: 1px solid rgba(191, 219, 254, 0.8);
-            padding: 14px 18px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(191, 219, 254, 0.6);
+            padding: 14px 16px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
         }
         #objective h2 {
-            font-size: 15.5px;
-            font-weight: 600;
-            color: #1d4ed8;
-            margin-bottom: 3px;
-        }
-        #objective .subtitle {
-            font-size: 12.5px;
-            color: #64748b;
-            margin-bottom: 6px;
-        }
-        #objective .summary-text {
-            font-size: 13px;
-            font-weight: 500;
-            color: #1e3a8a;
-            line-height: 1.5;
-            margin: 0;
-        }
-        .content-body {
-            padding: 36px 44px 44px;
-        }
-        dl {
-            display: grid;
-            grid-template-columns: 160px 1fr;
-            column-gap: 36px;
-            row-gap: 36px;
-        }
-        dt {
-            font-size: 14px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #2563eb;
-            text-align: right;
-            padding-right: 24px;
-            border-right: 2px solid #e2e8f0;
-        }
-        dd {
-            min-width: 0;
-        }
-        dd.clear {
-            display: none;
-        }
-        h2 {
             font-size: 15px;
             font-weight: 600;
-            color: #0f172a;
-            margin: 0 0 6px 0;
+            color: #1d4ed8;
+            margin-bottom: 2px;
+            line-height: 1.3;
+        }
+        #objective .subtitle {
+            font-size: 12px;
+            color: #64748b;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+        #objective .subtitle a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        #objective .subtitle a:hover {
+            text-decoration: underline;
+        }
+        #objective .summary-text {
+            font-size: 12.5px;
+            font-weight: 500;
+            color: #1e3a8a;
+            line-height: 1.45;
+            margin: 0;
+        }
+
+        /* Profile Image */
+        .photo-container {
+            flex-shrink: 0;
+        }
+        #pic {
+            width: 112px;
+            height: 112px;
+            border-radius: 16px;
+            object-fit: cover;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
+            border: 4px solid #ffffff;
+            display: block;
+        }
+
+        /* Content Body & Sections */
+        .content-body {
+            padding: 24px 32px 36px;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+        section {
+            border-top: 1px solid #e2e8f0;
+            padding-top: 24px;
+        }
+        section:first-child {
+            border-top: none;
+            padding-top: 4px;
+        }
+        .section-header {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
-            gap: 8px;
+            align-items: center;
+            margin-bottom: 16px;
         }
-        h2 span.current-date {
-            font-size: 11.5px;
+        .section-title {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #2563eb;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin: 0;
+        }
+        .scholar-link {
+            font-size: 12px;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.15s;
+        }
+        .scholar-link:hover {
+            text-decoration: underline;
             color: #1d4ed8;
+        }
+
+        /* Item Rows (Experience, Education) */
+        .item-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .item-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 16px;
+        }
+        .item-main {
+            flex: 1;
+            min-width: 0;
+        }
+        .item-title {
+            font-size: 14px;
             font-weight: 600;
-            background: #dbeafe;
+            color: #0f172a;
+            margin: 0 0 2px 0;
+        }
+        .item-subtitle {
+            font-size: 12.5px;
+            color: #64748b;
+            margin: 0;
+            line-height: 1.4;
+        }
+        .item-subtitle a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        .item-subtitle a:hover {
+            text-decoration: underline;
+        }
+        .item-date-current {
+            font-size: 11.5px;
+            font-weight: 600;
+            color: #1d4ed8;
+            background: rgba(219, 234, 254, 0.7);
             padding: 2px 8px;
             border-radius: 6px;
             font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            white-space: nowrap;
         }
-        h2 span {
+        .item-date {
             font-size: 11.5px;
-            color: #64748b;
             font-weight: 500;
+            color: #64748b;
             background: #f1f5f9;
             padding: 2px 8px;
             border-radius: 6px;
             font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            white-space: nowrap;
         }
-        a:link, a:visited {
-            color: #2563eb;
-            text-decoration: none;
-            transition: color 0.15s;
+
+        /* Publication Cards */
+        .pub-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
-        a:hover {
-            color: #1d4ed8;
-            text-decoration: underline;
-        }
-        a:active {
-            color: #1e40af;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0 0 20px 0;
-        }
-        ul > li {
-            font-size: 14px;
-            color: #475569;
-            margin-bottom: 4px;
-            position: relative;
-            padding-left: 14px;
-        }
-        ul > li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #94a3b8;
-        }
-        
-        /* Publication Card Styling */
-        ul.publications-list {
-            margin: 0;
-            padding: 0;
-        }
-        ul.publications-list > li {
-            padding: 14px 16px;
-            margin-bottom: 12px;
+        .pub-card {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
             border-radius: 12px;
+            padding: 14px 16px;
             transition: all 0.2s ease;
         }
-        ul.publications-list > li::before {
-            display: none;
-        }
-        ul.publications-list > li:hover {
+        .pub-card:hover {
             background: #ffffff;
             border-color: #93c5fd;
             box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
             transform: translateY(-1px);
         }
-        .paper-title {
-            font-size: 14.5px;
+        .pub-title {
+            font-size: 13.5px;
             font-weight: 600;
             color: #0f172a;
             margin-bottom: 4px;
+            line-height: 1.4;
         }
-        ul.paper {
-            margin: 0;
-            padding: 0;
-        }
-        ul.paper > li {
-            padding-left: 0;
-            margin-bottom: 3px;
-            font-size: 13px;
+        .pub-authors {
+            font-size: 12px;
             color: #64748b;
+            line-height: 1.45;
+            margin-bottom: 8px;
         }
-        ul.paper > li::before {
-            display: none;
-        }
-        ul.paper > li u {
+        .pub-authors u {
             color: #0f172a;
             font-weight: 600;
             text-decoration: underline;
         }
-        .venue-badge-arxiv {
-            display: inline-block;
+        .pub-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .badge-arxiv {
             font-size: 11px;
             font-weight: 600;
             color: #7e22ce;
             background: #f3e8ff;
             padding: 2px 8px;
             border-radius: 6px;
-            margin-right: 6px;
         }
-        .venue-badge {
-            display: inline-block;
+        .badge-venue {
             font-size: 11px;
             font-weight: 600;
             color: #4338ca;
             background: #e0e7ff;
             padding: 2px 8px;
             border-radius: 6px;
-            margin-right: 6px;
         }
-        .paper-link {
+        .pub-link {
             font-size: 12px;
             font-weight: 500;
             color: #2563eb;
             text-decoration: none;
+            transition: color 0.15s;
         }
-        .paper-link:hover {
+        .pub-link:hover {
             text-decoration: underline;
+            color: #1d4ed8;
         }
 
-        .clear { clear: both; }
-
-        @media (max-width: 768px) {
-            #page-wrap { border-radius: 0; border: none; }
-            .header-container { padding: 24px 20px; flex-direction: column-reverse; align-items: flex-start; gap: 16px; }
+        @media (max-width: 640px) {
+            body { padding: 16px 8px; }
+            #page-wrap { border-radius: 12px; }
+            .header-banner { padding: 20px 18px; flex-direction: column-reverse; gap: 16px; }
             #pic { width: 90px; height: 90px; }
-            .content-body { padding: 24px 20px; }
-            dl { grid-template-columns: 1fr; row-gap: 24px; }
-            dt { text-align: left; border-right: none; border-bottom: 2px solid #e2e8f0; padding: 0 0 6px 0; }
+            .content-body { padding: 20px 18px 28px; gap: 24px; }
+            .item-row { flex-direction: column; gap: 4px; }
+            .item-date, .item-date-current { align-self: flex-start; }
         }
      </style>
 </head>
@@ -292,11 +321,12 @@
 
     <div id="page-wrap">
     
-        <div class="header-container">
-            <div class="header-content">
-                <div id="contact-info" class="vcard">
+        <!-- Header Banner -->
+        <div class="header-banner">
+            <div class="header-main">
+                <div class="vcard">
                     <h1 class="fn">Hidekazu Oiwa</h1>
-                    <p class="contact-links">
+                    <p class="contact-line">
                         <span>📧 hidekazu.oiwa at gmail.com</span>
                         <span class="contact-dot">•</span>
                         <a href="https://github.com/oiwah" target="_blank">GitHub</a>
@@ -312,162 +342,209 @@
                 </div>
             </div>
 
-            <img src="images/profile.jpg" alt="Hidekazu Oiwa" id="pic" />
+            <div class="photo-container">
+                <img src="images/profile.jpg" alt="Hidekazu Oiwa" id="pic" />
+            </div>
         </div>
 
+        <!-- Main Content -->
         <div class="content-body">
-        <dl>
-            <dd class="clear"></dd>
-
-            <dt>Experience</dt>
-            <dd>
-                <h2>Google DeepMind <span class="current-date">2025/08 >> ....</span></h2>
-		<ul>
-		  <li>Software Engineer</li>
-		</ul>
-                <h2>Google <span>2018/01 >> 2025/08</span></h2>
-		<ul>
-		  <li>Software Engineer (Machine Learning)</li>
-		</ul>
-                <h2>Recruit Holdings Co., Ltd. / Megagon Lab <span>2015/04 >> 2017/12</span></h2>
-		<ul>
-		  <li>Researcher</li>
-		</ul>
-                <h2>Stanford University <span>2015/09 >> 2017/08</span></h2>
-		<ul>
-		  <li>Visiting Scholar</li>
-		</ul>
-	        <h2><a href="http://www.nec-labs.com/">NEC Laboratories America</a></h2>
-                <ul>
-                  <li>Visiting Research</li>
-                  <li>Supervisor: Dr. Ryohei Fujimaki</li>
-	        </ul>
-	        <h2><a href="https://research.microsoft.com/en-us/labs/asia/">Microsoft Research Asia</a></h2>
-                <ul>
-                  <li>Research Internship</li>
-                  <li>Supervisor: Dr. Junichi Tsujii</li>
-		</ul>
-	        <h2><a href="http://preferred.jp/en/">Preferred Infrastructure</a></h2>
-	        <ul>
-                  <li>Internship</li>
-	        </ul>
-            </dd>
-            <dd class="clear"></dd>
-
-            <dt>Education</dt>
-            <dd>
-                <h2>Ph.D., Mathematical Informatics, The University of Tokyo <span>2010/04 >> 2015/03</span></h2>
-                <ul>
-		  <li>
-		    A receiptant of Research Fellowship for Young Scientists (DC1) from <a href="http://www.jsps.go.jp/english/index.html">JSPS</a>
-		  </li>
-		  <li>
-		    <strong>Concentration:</strong> Machine Learning, Natural Language Processing
-		  </li>
-		  <li>
-		    <strong>Supervisor:</strong> Hiroshi Nakagawa
-		  </li>
-		</ul>
-                <h2>BA, Engineering, The University of Tokyo <span>2006/04 >> 2010/03</span></h2>
-                <ul>
-		  <li>
-	            <strong>Concentration:</strong> Financial Statistics, Economics
-		  </li>
-		  <li>
-		    <strong>Supervisor:</strong> Fumiko Takeda
-                  </li>
-		</ul>
-            </dd>
-
-            <dd class="clear"></dd>
             
-            <dt>Selected Publications</dt>
-            <dd>
-		<div style="margin-bottom: 16px;">
-		  <a href="https://scholar.google.co.jp/citations?user=fGSgRDUAAAAJ&hl=en" target="_blank" style="font-size: 13.5px; font-weight: 500;">Full publication list is on Google Scholar →</a>
-		</div>
-		<ul class="publications-list">
-		  <li>
-		     <div class="paper-title">"DeepSearchQA: Bridging the Comprehensiveness Gap for Deep Research Agents"</div>
-	             <ul class="paper">
-		        <li>Nikita Gupta, Riju Chatterjee, Lukas Haas, Connie Tao, Andrew Wang, Chang Liu, <u>Hidekazu Oiwa</u>, Elena Gribovskaya, Jan Ackermann, John Blitzer, Sasha Goldshtein, Dipanjan Das</li>
-	                <li><span class="venue-badge-arxiv">arXiv (2026)</span> <a class="paper-link" href="https://arxiv.org/abs/2601.20975" target="_blank">[Paper]</a></li>
-		     </ul>
-		  </li>
-		  <li>
-		     <div class="paper-title">"Scalable Semantic Querying of Text"</div>
-	             <ul class="paper">
-		        <li>Xiaolan Wang, Aaron Feng, Behzad Golshan, Alon Halevy, George Mihaila, <u>Hidekazu Oiwa</u>, Wang-Chiew Tan</li>
-	                <li><span class="venue-badge">VLDB 2018</span></li>
-		     </ul>
-		  </li>
-		  <li>
-		     <div class="paper-title">"Knowledge Transfer for Out-of-Knowledge-Base Entities: A Graph Neural Network Approach"</div>
-                     <ul class="paper">
-                        <li>Takuo Hamaguchi, <u>Hidekazu Oiwa</u>, Masashi Shinbo, Yuji Matsumoto</li>
-                        <li><span class="venue-badge">IJCAI 2017</span></li>
-                     </ul>
-		  </li>
-		  <li>
-		     <div class="paper-title">"Partition-wise Linear Models"</div>
-                     <ul class="paper">
-                        <li><u>Hidekazu Oiwa</u>, Ryohei Fujimaki</li>
-                        <li><span class="venue-badge">NIPS 2014</span> <a class="paper-link" href="http://papers.nips.cc/paper/5605-partition-wise-linear-models.pdf" target="_blank">[Paper]</a></li>
-                     </ul>
-		  </li>
-		  <li>
-		     <div class="paper-title">"Online and Stochastic Learning with a Human Cognitive Bias"</div>
-                     <ul class="paper">
-                        <li><u>Hidekazu Oiwa</u>, Hiroshi Nakagawa</li>
-                        <li><span class="venue-badge">AAAI-14</span> <a class="paper-link" href="http://www.aaai.org/ocs/index.php/AAAI/AAAI14/paper/viewPDFInterstitial/8358/8844" target="_blank">[Paper]</a> <a class="paper-link" href="papers/oiwa_aaai2014_sup.pdf">[Extended Version]</a> <a class="paper-link" href="upload/oiwa_aaai2014_pre.pdf">[Slides]</a></li>
-                     </ul>
-		  </li>
-		  <li>
-		     <div class="paper-title">"Healing Truncation Bias : Self-weighted Truncation framework for Dual Averaging"</div>
-                     <ul class="paper">
-                        <li><u>Hidekazu Oiwa</u>, Shin Matsushima, Hiroshi Nakagawa</li>
-                        <li><span class="venue-badge">ICDM 2012</span> <a class="paper-link" href="papers/oiwa_icdm2012.pdf">[Preprint]</a> <a class="paper-link" href="upload/oiwa_icdm2012_pre.pdf">[Slides]</a></li>
-                     </ul>
-		  </li>
-		</ul>
-            </dd>
-            
-            <dd class="clear"></dd>
+            <!-- Experience -->
+            <section id="experience">
+                <div class="section-header">
+                    <h3 class="section-title">💼 Experience</h3>
+                </div>
+                <div class="item-list">
+                    <div class="item-row">
+                        <div class="item-main">
+                            <p class="item-title">Google DeepMind</p>
+                            <p class="item-subtitle">Software Engineer</p>
+                        </div>
+                        <span class="item-date-current">2025/08 &gt;&gt; present</span>
+                    </div>
 
-            <dt>Selected Honors / Achievements</dt>
-            <dd>
-	      <h2>Microsoft Research Asia Excellent Internship Award<span>2014</span></h2>
-	      <ul>
-		<li>Microsoft Research Asia</li>
-	      </ul>
+                    <div class="item-row">
+                        <div class="item-main">
+                            <p class="item-title">Google</p>
+                            <p class="item-subtitle">Software Engineer (Machine Learning)</p>
+                        </div>
+                        <span class="item-date">2018/01 &gt;&gt; 2025/08</span>
+                    </div>
 
-	      <h2>IPSJ Computer Science Research Award for Young Scientists</h2>
-	      <h2>Presentation Award<span>Mar, 2011</span></h2>
-	      <ul>
-		<li>82th Conference of Mathematical Modeling and Problem Solving.</li>
-		<li><strong>Paper:</strong> "L1 regularized online supervised learning using feature frequency."</li>
-	      </ul>
+                    <div class="item-row">
+                        <div class="item-main">
+                            <p class="item-title">Recruit Holdings Co., Ltd. / Megagon Lab</p>
+                            <p class="item-subtitle">Researcher</p>
+                        </div>
+                        <span class="item-date">2015/04 &gt;&gt; 2017/12</span>
+                    </div>
 
-	      <h2>Enginnering Dean's Award for students</h2>
-	      <h2>Outstanding Research Award<span>Mar, 2010</span></h2>
-	      <ul>
-		<li>The University of Tokyo.</li>
-		<li><strong>Paper:</strong> "The Economic Impact of Herd Behavior in the Japanese Loan Market."</li>
-	      </ul>
-	    </dd>
+                    <div class="item-row">
+                        <div class="item-main">
+                            <p class="item-title">Stanford University</p>
+                            <p class="item-subtitle">Visiting Scholar</p>
+                        </div>
+                        <span class="item-date">2015/09 &gt;&gt; 2017/08</span>
+                    </div>
 
-            <dd class="clear"></dd>
+                    <div class="item-row">
+                        <div class="item-main">
+                            <p class="item-title"><a href="http://www.nec-labs.com/" target="_blank" style="color: inherit; text-decoration: none;">NEC Laboratories America</a></p>
+                            <p class="item-subtitle">Visiting Research • Supervisor: Dr. Ryohei Fujimaki</p>
+                        </div>
+                    </div>
 
-            <dt>Links</dt>
-	    <dd>
-	      <ul>
-                <li><a href="https://www.linkedin.com/in/hidekazu-oiwa-18772b26">Linkedin</a></li>
-                <li><a href="https://github.com/oiwah">Github</a></li>
-	      </ul>
-            </dd>
-        </dl>
+                    <div class="item-row">
+                        <div class="item-main">
+                            <p class="item-title"><a href="https://research.microsoft.com/en-us/labs/asia/" target="_blank" style="color: inherit; text-decoration: none;">Microsoft Research Asia</a></p>
+                            <p class="item-subtitle">Research Internship • Supervisor: Dr. Junichi Tsujii</p>
+                        </div>
+                    </div>
+
+                    <div class="item-row">
+                        <div class="item-main">
+                            <p class="item-title"><a href="http://preferred.jp/en/" target="_blank" style="color: inherit; text-decoration: none;">Preferred Infrastructure</a></p>
+                            <p class="item-subtitle">Internship</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Selected Publications -->
+            <section id="publications">
+                <div class="section-header">
+                    <h3 class="section-title">📚 Selected Publications</h3>
+                    <a href="https://scholar.google.co.jp/citations?user=fGSgRDUAAAAJ&hl=en" target="_blank" class="scholar-link">Google Scholar →</a>
+                </div>
+                <div class="pub-list">
+                    <div class="pub-card">
+                        <p class="pub-title">"DeepSearchQA: Bridging the Comprehensiveness Gap for Deep Research Agents"</p>
+                        <p class="pub-authors">
+                            Nikita Gupta, Riju Chatterjee, Lukas Haas, Connie Tao, Andrew Wang, Chang Liu, <u>Hidekazu Oiwa</u>, Elena Gribovskaya, Jan Ackermann, John Blitzer, Sasha Goldshtein, Dipanjan Das
+                        </p>
+                        <div class="pub-meta">
+                            <span class="badge-arxiv">arXiv (2026)</span>
+                            <a href="https://arxiv.org/abs/2601.20975" target="_blank" class="pub-link">[Paper]</a>
+                        </div>
+                    </div>
+
+                    <div class="pub-card">
+                        <p class="pub-title">"Scalable Semantic Querying of Text"</p>
+                        <p class="pub-authors">
+                            Xiaolan Wang, Aaron Feng, Behzad Golshan, Alon Halevy, George Mihaila, <u>Hidekazu Oiwa</u>, Wang-Chiew Tan
+                        </p>
+                        <div class="pub-meta">
+                            <span class="badge-venue">VLDB 2018</span>
+                        </div>
+                    </div>
+
+                    <div class="pub-card">
+                        <p class="pub-title">"Knowledge Transfer for Out-of-Knowledge-Base Entities: A Graph Neural Network Approach"</p>
+                        <p class="pub-authors">
+                            Takuo Hamaguchi, <u>Hidekazu Oiwa</u>, Masashi Shinbo, Yuji Matsumoto
+                        </p>
+                        <div class="pub-meta">
+                            <span class="badge-venue">IJCAI 2017</span>
+                        </div>
+                    </div>
+
+                    <div class="pub-card">
+                        <p class="pub-title">"Partition-wise Linear Models"</p>
+                        <p class="pub-authors">
+                            <u>Hidekazu Oiwa</u>, Ryohei Fujimaki
+                        </p>
+                        <div class="pub-meta">
+                            <span class="badge-venue">NIPS 2014</span>
+                            <a href="http://papers.nips.cc/paper/5605-partition-wise-linear-models.pdf" target="_blank" class="pub-link">[Paper]</a>
+                        </div>
+                    </div>
+
+                    <div class="pub-card">
+                        <p class="pub-title">"Online and Stochastic Learning with a Human Cognitive Bias"</p>
+                        <p class="pub-authors">
+                            <u>Hidekazu Oiwa</u>, Hiroshi Nakagawa
+                        </p>
+                        <div class="pub-meta">
+                            <span class="badge-venue">AAAI-14</span>
+                            <a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI14/paper/viewPDFInterstitial/8358/8844" target="_blank" class="pub-link">[Paper]</a>
+                            <a href="papers/oiwa_aaai2014_sup.pdf" target="_blank" class="pub-link">[Extended Version]</a>
+                            <a href="upload/oiwa_aaai2014_pre.pdf" target="_blank" class="pub-link">[Slides]</a>
+                        </div>
+                    </div>
+
+                    <div class="pub-card">
+                        <p class="pub-title">"Healing Truncation Bias : Self-weighted Truncation framework for Dual Averaging"</p>
+                        <p class="pub-authors">
+                            <u>Hidekazu Oiwa</u>, Shin Matsushima, Hiroshi Nakagawa
+                        </p>
+                        <div class="pub-meta">
+                            <span class="badge-venue">ICDM 2012</span>
+                            <a href="papers/oiwa_icdm2012.pdf" target="_blank" class="pub-link">[Preprint]</a>
+                            <a href="upload/oiwa_icdm2012_pre.pdf" target="_blank" class="pub-link">[Slides]</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section id="education">
+                <div class="section-header">
+                    <h3 class="section-title">🎓 Education</h3>
+                </div>
+                <div class="item-list">
+                    <div class="item-row">
+                        <div class="item-main">
+                            <p class="item-title">Ph.D., Mathematical Informatics, The University of Tokyo</p>
+                            <p class="item-subtitle">Concentration: Machine Learning, Natural Language Processing • Supervisor: Hiroshi Nakagawa</p>
+                            <p class="item-subtitle" style="margin-top: 2px;">A recipient of Research Fellowship for Young Scientists (DC1) from <a href="http://www.jsps.go.jp/english/index.html" target="_blank">JSPS</a></p>
+                        </div>
+                        <span class="item-date">2010/04 &gt;&gt; 2015/03</span>
+                    </div>
+
+                    <div class="item-row">
+                        <div class="item-main">
+                            <p class="item-title">BA, Engineering, The University of Tokyo</p>
+                            <p class="item-subtitle">Concentration: Financial Statistics, Economics • Supervisor: Fumiko Takeda</p>
+                        </div>
+                        <span class="item-date">2006/04 &gt;&gt; 2010/03</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Honors -->
+            <section id="honors">
+                <div class="section-header">
+                    <h3 class="section-title">🏆 Selected Honors / Achievements</h3>
+                </div>
+                <div class="item-list">
+                    <div class="item-row">
+                        <div class="item-main">
+                            <p class="item-title">Microsoft Research Asia Excellent Internship Award</p>
+                            <p class="item-subtitle">Microsoft Research Asia</p>
+                        </div>
+                        <span class="item-date">2014</span>
+                    </div>
+
+                    <div class="item-row">
+                        <div class="item-main">
+                            <p class="item-title">IPSJ Computer Science Research Award for Young Scientists & Presentation Award</p>
+                            <p class="item-subtitle">82th Conference of Mathematical Modeling and Problem Solving • Paper: "L1 regularized online supervised learning using feature frequency."</p>
+                        </div>
+                        <span class="item-date">Mar, 2011</span>
+                    </div>
+
+                    <div class="item-row">
+                        <div class="item-main">
+                            <p class="item-title">Engineering Dean's Award for students & Outstanding Research Award</p>
+                            <p class="item-subtitle">The University of Tokyo • Paper: "The Economic Impact of Herd Behavior in the Japanese Loan Market."</p>
+                        </div>
+                        <span class="item-date">Mar, 2010</span>
+                    </div>
+                </div>
+            </section>
+
         </div>
-        <div class="clear"></div>
     </div>
 
 </body>
